@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34003.232
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Futtat", "Futtat\Futtat.csproj", "{C43485E0-9E77-46D0-B450-E86D8A78FD5E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AF282BD6-0204-4CE3-8399-94F342688A6E} = {AF282BD6-0204-4CE3-8399-94F342688A6E}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Class Library", "Class Library\Class Library.csproj", "{AF282BD6-0204-4CE3-8399-94F342688A6E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C43485E0-9E77-46D0-B450-E86D8A78FD5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C43485E0-9E77-46D0-B450-E86D8A78FD5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C43485E0-9E77-46D0-B450-E86D8A78FD5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C43485E0-9E77-46D0-B450-E86D8A78FD5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF282BD6-0204-4CE3-8399-94F342688A6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF282BD6-0204-4CE3-8399-94F342688A6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF282BD6-0204-4CE3-8399-94F342688A6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF282BD6-0204-4CE3-8399-94F342688A6E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F32DD439-E8CB-444A-9363-A31389EE11EB}
+	EndGlobalSection
+EndGlobal
