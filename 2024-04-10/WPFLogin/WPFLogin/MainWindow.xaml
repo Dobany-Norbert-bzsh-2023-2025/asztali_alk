@@ -1,0 +1,20 @@
+﻿<Window x:Class="WPFLogin.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFLogin"
+        mc:Ignorable="d"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        Background="Transparent"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <!--<Image Source="/Btaman_kicsi.png" ></Image>-->
+        <Image Source="/Shape.png" MouseDown="Image_MouseDown"></Image>
+        <TextBox Name="tbUsername" FontSize="20" HorizontalAlignment="Left" Margin="362,117,0,0" VerticalAlignment="Top"  TextWrapping="Wrap" Text="Username: " Width="304" Height="30" GotFocus="tbUsername_GotFocus" LostFocus="tbUsername_LostFocus"/>
+        <TextBox Name="tbPassword" FontSize="20" HorizontalAlignment="Left" Margin="362,171,0,0" VerticalAlignment="Top"  TextWrapping="Wrap" Text="Password:" Width="304" Height="30" GotFocus="tbPassword_GotFocus" LostFocus="tbPassword_LostFocus"/>
+        <Button Content="Login" HorizontalAlignment="Left" Margin="362,239,0,0" VerticalAlignment="Top" Width="112" Click="Login_Click"/>
+        <Button Content="X" HorizontalAlignment="Left" Margin="717,68,0,0" VerticalAlignment="Top" Width="22" Click="Button_Click"/>
+    </Grid>
+</Window>
