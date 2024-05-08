@@ -42,8 +42,7 @@ namespace Kezdetibeall
             int[] t = { 7982, 7566, 7788, 7902};
             KiIr(db.Alkalmazott.Where(x => t.Contains(x.FonokId)));
 
-
-
+            
         }
     }
     

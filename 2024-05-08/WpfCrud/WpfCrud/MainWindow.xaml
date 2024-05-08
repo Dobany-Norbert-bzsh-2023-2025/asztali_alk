@@ -1,0 +1,97 @@
+﻿<Window x:Class="WpfCrud.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfCrud"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Height="450" 
+        Width="800" 
+        AllowsTransparency="True" 
+        WindowStyle="none" 
+        Background="Transparent"
+        MouseDown="Window_MouseDown">
+
+
+    <!--<Button Content="Add" Click="Button_ClickOpenAddWindow"></Button>-->
+
+
+
+    <Border Background="PeachPuff" CornerRadius="200,0,200,0">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Munkatársak felvétele" 
+                    FontSize="38"
+                    TextAlignment="Center"
+                    Grid.ColumnSpan="2"
+                    Padding="70,20,0,20">
+            </TextBlock>
+            <TextBlock Text="x" FontSize="30" 
+                    HorizontalAlignment="Right"
+                    TextAlignment="center"
+                    Grid.Column="3"
+                    Padding="10,0"
+                    PreviewMouseDown="TextBlock_PreviewMouseDown">
+            </TextBlock>
+
+            <ListBox x:Name="listboxPerson" 
+                     Background="Transparent"
+                     FontSize="20"
+                     IsSynchronizedWithCurrentItem="True" Grid.ColumnSpan="2" Margin="37,10,363,-10" Grid.RowSpan="2" Grid.Row="1"/>
+
+            <StackPanel Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Column="1" Margin="0,10,200,0" Height="92">
+                <TextBlock Text="Name"
+                        FontSize="24"
+                        />
+                <TextBlock Text="Age"
+                        FontSize="24"
+                        />
+            </StackPanel>
+
+            <StackPanel x:Name="spInput" Grid.Row="1" VerticalAlignment="Top" Margin="117,0,-61,0" Grid.Column="1">
+                <TextBox Text="{Binding Name}"
+                      FontSize="24"
+                      Padding="0,10"
+                      Background="LightGray" Width="160"/>
+                <TextBox Text="{Binding Age}"
+                      FontSize="24"
+                      Margin="10"
+                      Padding="0,10"
+                      Background="LightGray" Width="160"/>
+            </StackPanel>
+            <StackPanel Grid.Row="1" Orientation="Horizontal" Grid.ColumnSpan="2" Margin="295,127,17,180">
+                <Button Content="Save" 
+                     Grid.Row="2" 
+                     Margin="5" 
+                     FontSize="24"
+                     Width="150"
+                     Click="viewClick">
+                </Button>
+                <Button Content="Delete" 
+                        Grid.Row="2" 
+                        Margin="5" 
+                        FontSize="24"
+                        Width="150" Click="DeleteClick">
+
+                </Button>
+                <Button Content="Close" 
+                     Grid.Row="2" 
+                     Margin="5" 
+                     FontSize="24"
+                     Width="150"
+                     PreviewMouseDown="TextBlock_PreviewMouseDown">
+                </Button>
+
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>
