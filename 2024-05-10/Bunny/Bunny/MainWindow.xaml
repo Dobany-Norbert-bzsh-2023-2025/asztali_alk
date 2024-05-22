@@ -1,0 +1,159 @@
+﻿<Window x:Class="Bunny.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bunny"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="800"
+        Background="#181735"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        FontFamily="Font/#Dosis"
+        FontWeight="Medium">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.ColumnSpan="2" Background="#0F0F2D"
+           MouseDown="Grid_MouseDown"
+           >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="BunnyCo"
+                    Foreground="White"
+                    Grid.Column="1"
+                    HorizontalAlignment="Center"
+                     VerticalAlignment="Center"
+                    />
+            <TextBlock Text="Menu"
+                    Foreground="LightGray"
+                    Grid.Column="2"
+                    HorizontalAlignment="Center"
+                     VerticalAlignment="Center"
+                    />
+            <TextBlock Text="Website"
+                    Foreground="LightGray"
+                    Grid.Column="3"
+                    HorizontalAlignment="Center"
+                     VerticalAlignment="Center"
+                    />
+
+        </Grid>
+        <StackPanel Grid.Row="1">
+            <StackPanel Orientation="Horizontal">
+                <Image Width="50" Height="50"
+              Source="Images/shuttle.png"/>
+                <TextBlock
+                 Text="BunnyCo"
+                 Foreground="White"
+                 VerticalAlignment="Center"
+                 FontSize="22"/>
+            </StackPanel>
+
+            <StackPanel>
+
+                <TextBlock
+             Foreground="White"
+             FontSize="26"
+             FontWeight="Medium"                    
+             Text="Customize" />
+                <TextBlock
+             Foreground="White"
+             FontSize="26"
+             FontWeight="Medium"                    
+             Text="Your" />
+                <TextBlock
+             Foreground="White"
+             FontSize="26"
+             FontWeight="Medium"                    
+             Text="Experience" />
+
+                <TextBlock Foreground="White"
+             FontSize="14"
+             FontWeight="Medium"  
+             TextWrapping="Wrap"
+             Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the " />
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Button
+              Content="Start"  
+              Foreground="White">
+
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#FE6584"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#FF4C70"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border
+                             Width="100"
+                             Height="25"
+                             CornerRadius="15"
+                             Background="{TemplateBinding Background}"
+                             >
+                                <ContentPresenter
+                                 VerticalAlignment="Center"
+                                 HorizontalAlignment="Center">
+
+                                </ContentPresenter>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+
+                </Button>
+            </StackPanel>
+        </StackPanel>
+
+        <Grid Grid.Row="1" Grid.Column="1" Margin="-300,0,-400,0">
+            <Grid.RenderTransform>
+                <RotateTransform Angle="0"/>
+            </Grid.RenderTransform>
+
+            <StackPanel>
+                <StackPanel>
+                    <Border Background="#3dddc2" Width="1000" Height="50" CornerRadius="15"/>
+                    <Border Background="#fc6586" Width="1000" Height="50" CornerRadius="15" Margin="-70,15,0,15"/>
+                    <Border Background="#383668" Width="1000" Height="50" CornerRadius="15"/>
+                </StackPanel>
+                <StackPanel>
+                    <Border Background="#3dddc2" Width="1000" Height="50" CornerRadius="15"/>
+                    <Border Background="#fc6586" Width="1000" Height="50" CornerRadius="15" Margin="-70,15,0,15"/>
+                    <Border Background="#383668" Width="1000" Height="50" CornerRadius="15"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+
+
+</Window>
