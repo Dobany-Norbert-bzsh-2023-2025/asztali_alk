@@ -1,0 +1,57 @@
+﻿<Application x:Class="LotteryWpf.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:LotteryWpf"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style x:Key="BetBoxStyle"
+               TargetType="CheckBox">
+            <Setter Property="Margin" Value="8"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="CheckBox">
+                        <Border
+                            x:Name="Border"
+                            Width="50"
+                            Height="50"
+                            CornerRadius="20"
+                            Background="Transparent"
+                            BorderThickness="2"
+                            BorderBrush="Green">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Ellipse
+                                    x:Name="Ellipse"
+                                    Width="20"
+                                    Height="20"
+                                    Fill="white"
+                                    Margin="2 0 0 0"
+                                    Grid.Row="1"/>
+                                <TextBlock
+                                    
+                                    Text="{TemplateBinding Content}"
+                                    VerticalAlignment="Center"
+                                    TextAlignment="Center"
+                                    FontSize="20"
+                                    Foreground="Green"/>
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter Property="Fill" Value="DarkGreen" TargetName="Ellipse"/>
+                            </Trigger>
+                            
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Background" Value="DarkGray" TargetName="Border"/>
+                            </Trigger>
+                            
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Application.Resources>
+</Application>
